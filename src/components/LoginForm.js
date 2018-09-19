@@ -6,7 +6,8 @@ import {
   StyleSheet
 } from 'react-native';
 import {connect} from 'react-redux';
-import {emailChanged } from '../actions';
+import {
+  emailChanged, passwordChanged} from '../actions';
 import {
   Card,
   CardSection,
@@ -147,5 +148,5 @@ const mapStateToProps = ({
 };
 
 export default connect(mapStateToProps, {
-  emailChanged
+  emailChanged, passwordChanged
 })(LoginForm);
