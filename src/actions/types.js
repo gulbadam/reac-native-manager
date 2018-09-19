@@ -1,1 +1,1 @@
-export const LOGIN_CHANGED = 'login_changed'
+export const EMAIL_CHANGED = 'login_changed'

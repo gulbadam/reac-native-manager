@@ -1,7 +1,9 @@
-import {LOGIN_CHANGED} from './types';
-export const loginChanged = (text) => {
+import {
+    EMAIL_CHANGED
+} from './types';
+export const emailChanged = (text) => {
     return {
-        type: LOGIN_CHANGED,
+        type: EMAIL_CHANGED,
         payload: text 
     }
 }
