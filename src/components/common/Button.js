@@ -7,26 +7,29 @@ const Button = ({ onPress, children })=> {
 //     <Text style= {textStyle}>{children}</Text>
 //     </TouchableOpacity>
 // 
-    <TouchableOpacity style={styles.button}
-        title="Login"
-        onPress={this.handleSubmit}><Text style={styles.buttonText}>Login</Text></TouchableOpacity>
+    <TouchableOpacity onPress={onPress} style={styles.button}>
+    <Text style={styles.buttonText}>{children}</Text></TouchableOpacity>
  );
  };
 const styles = {
     button: {
-        height: 36,
-        backgroundColor: '#48BBEC',
-        borderColor: '#48BBEC',
-        borderWidth: 1,
-        borderRadius: 8,
-        marginBottom: 10,
-        alignSelf: 'stretch',
-        justifyContent: 'center'
+        flex: 1,
+            alignSelf: 'stretch',
+            backgroundColor: '#cef',
+            borderRadius: 5,
+            borderWidth: 1,
+            borderColor: '#007aff',
+            marginLeft: 5,
+            marginRight: 5
+        
     },
     buttonText: {
-        fontSize: 18,
-        color: 'white',
-        alignSelf: 'center'
+        alignSelf: 'center',
+            color: '#007aff',
+            fontSize: 16,
+            fontWeight: '600',
+            paddingTop: 10,
+            paddingBottom: 10
     }
 };
 export { Button };

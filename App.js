@@ -9,8 +9,9 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import firebase from 'firebase';
+import ReduxThunk from 'redux-thunk';
 import reducers from './src/reducers'
 import LoginForm from './src/components/LoginForm'
 
@@ -20,7 +21,7 @@ const instructions = Platform.select({
     'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu',
 });
-store = createStore(reducers)
+
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -37,6 +38,7 @@ export default class App extends Component<Props> {
   };
   
   render() {
+     const store = createStore(reducers, {}, applyMiddleware(ReduxThunk))
     return (
       <Provider store={store}>
     

@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import {connect} from 'react-redux';
 import {
-  emailChanged, passwordChanged} from '../actions';
+  emailChanged, passwordChanged, loginUser} from '../actions';
 import {
   Card,
   CardSection,
@@ -49,6 +49,7 @@ import t from 'tcomb-form-native'; // 0.6.16
     this.props.passwordChanged(text);
   }
   onButtonPress() {
+    console.log("presed")
     const {
       email,
       password
@@ -58,6 +59,7 @@ import t from 'tcomb-form-native'; // 0.6.16
       email,
       password
     });
+    console.log("presed")
   }
 
 
@@ -148,5 +150,5 @@ const mapStateToProps = ({
 };
 
 export default connect(mapStateToProps, {
-  emailChanged, passwordChanged
+  emailChanged, passwordChanged, loginUser
 })(LoginForm);
