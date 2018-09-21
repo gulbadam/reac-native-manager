@@ -81,7 +81,19 @@ import t from 'tcomb-form-native'; // 0.6.16
       </Button>
     );
   }
-
+renderError() {
+  if (this.props.error) {
+    return (
+      <View>
+      <Text style = {
+        styles.errorTextStyle} >
+      {this.props.error}
+      </Text>
+      </View>
+    )
+    
+  }
+}
  
   
   render() {
@@ -106,9 +118,7 @@ import t from 'tcomb-form-native'; // 0.6.16
           />
         </CardSection>
         <CardSection>
-        <Text style={styles.errorTextStyle}>
-          {this.props.error}
-        </Text>
+        {this.renderError()}
         </CardSection>
          <CardSection>
           {this.renderButton()}
@@ -127,6 +137,7 @@ const styles = {
     fontSize: 20,
     alignSelf: 'center',
     color: 'red',
+
    
   }
 };
