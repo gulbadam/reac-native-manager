@@ -117,9 +117,9 @@ renderError() {
             value={this.props.password}
           />
         </CardSection>
-        <CardSection>
+        
         {this.renderError()}
-        </CardSection>
+        
          <CardSection>
           {this.renderButton()}
         </CardSection>
