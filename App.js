@@ -12,8 +12,9 @@ import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk';
-import reducers from './src/reducers'
-import LoginForm from './src/components/LoginForm'
+import reducers from './src/reducers';
+import LoginForm from './src/components/LoginForm';
+import Router from './src/Router';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -42,7 +43,7 @@ export default class App extends Component<Props> {
     return (
       <Provider store={store}>
     
-      <LoginForm/>
+      <Router/>
       </Provider>
     );
   }
