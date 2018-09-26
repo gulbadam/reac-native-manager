@@ -49,7 +49,6 @@ import t from 'tcomb-form-native'; // 0.6.16
     this.props.passwordChanged(text);
   }
   onButtonPress() {
-    console.log("presed")
     const {
       email,
       password
@@ -59,7 +58,7 @@ import t from 'tcomb-form-native'; // 0.6.16
       email,
       password
     });
-    console.log("presed")
+
   }
 
 
