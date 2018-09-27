@@ -7,7 +7,7 @@ import { CardSection, Input, Button } from './common';
 class EmployeeForm extends Component {
     onButtonPress() {
       const {name, phone, shift}  = this.props;
-      this.props.employeeCreate({name, phone, shift})
+      this.props.employeeCreate({name, phone, shift: shift || 'Monday'})
     }
   render() {
     return (
