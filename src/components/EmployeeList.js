@@ -34,7 +34,7 @@ class EmployeeList extends Component {
   render() {
     return (
       <ListView
-  enableEmptySections
+      enableEmptySections
         dataSource={this.dataSource}
         renderRow={this.renderRow}
       />
