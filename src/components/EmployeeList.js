@@ -12,13 +12,10 @@ import _ from 'lodash'
 class EmployeeList extends Component {
   componentWillMount() {
     this.props.employeesFetch();
-
     this.createDataSource(this.props);
   }
 
   componentWillReceiveProps(nextProps) {
-    
-
     this.createDataSource(nextProps);
   }
 
@@ -37,7 +34,7 @@ class EmployeeList extends Component {
   render() {
     return (
       <ListView
-        enableEmptySections
+        //enableEmptySections
         dataSource={this.dataSource}
         renderRow={this.renderRow}
       />
